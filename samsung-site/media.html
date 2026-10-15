@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samsung Media - Rasmlar, Videolar, GIFlar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .gallery img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin: 30px 0;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .media-section {
+            margin: 50px 0;
+        }
+        .gif-placeholder {
+            background: linear-gradient(45deg, #1428A0, #4A6CF7);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="media/particles4.gif" alt="Particles" class="nav-video">
+        <div class="nav-overlay"></div>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.jpg" alt="Samsung Logo">
+                    SAMSUNG
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Bosh sahifa</a></li>
+                    <li><a href="haqida.html">Kompaniya haqida</a></li>
+                    <li><a href="tarix.html">Tarix</a></li>
+                    <li><a href="mahsulotlar.html">Mahsulotlar</a></li>
+                    <li><a href="telefonlar.html">Smartfonlar</a></li>
+                    <li><a href="media.html" class="active">Media</a></li>
+                    <li><a href="aloqa.html">Aloqa</a></li>
+                </ul>
+                
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h1 class="section-title">Samsung Media - Rasmlar, Videolar va GIFlar</h1>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Samsung mahsulotlari, ofislar va innovatsiyalarining rasmlari va rasmiy videolari.</p>
+
+            <div class="media-section">
+                <h2 style="color: var(--samsung-blue); text-align: center;">Rasmlar Galereyasi</h2>
+                <div class="gallery">
+                    <img src="images/logo.jpg" alt="Samsung Logo" onclick="openLightbox(this.src)">
+                    <img src="images/phone.jpg" alt="Galaxy S26 Ultra" onclick="openLightbox(this.src)">
+                    <img src="images/tv.jpg" alt="Samsung QLED TV" onclick="openLightbox(this.src)">
+                    <img src="images/hq.jpg" alt="Samsung Digital City" onclick="openLightbox(this.src)">
+                    <img src="images/phone.jpg" alt="Galaxy Smartfon" onclick="openLightbox(this.src)">
+                    <img src="images/tv.jpg" alt="Living Room TV" onclick="openLightbox(this.src)">
+                    <img src="images/hq.jpg" alt="Headquarters" onclick="openLightbox(this.src)">
+                    <img src="images/logo.jpg" alt="Samsung Brand" onclick="openLightbox(this.src)">
+                </div>
+            </div>
+
+            <div class="media-section">
+                <h2 style="color: var(--samsung-blue); text-align: center;">Mahalliy Videolar va GIFlar</h2>
+                
+                <h3 style="margin: 30px 0 15px;">Samsung Slideshow Video</h3>
+                <video controls width="100%" style="max-width: 800px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); display: block; margin: 0 auto;">
+                    <source src="media/samsung-slideshow.mp4" type="video/mp4">
+                    Brauzeringiz video qo‘llab-quvvatlamaydi.
+                </video>
+
+                <h3 style="margin: 40px 0 15px; text-align: center;">GIFlar</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+                    <div style="text-align: center;">
+                        <img src="media/samsung-slideshow.gif" alt="Samsung Slideshow GIF" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <p>Mahsulotlar slideshow GIF</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="media/phone-zoom.gif" alt="Phone Zoom GIF" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <p>Galaxy telefon zoom GIF</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="media-section">
+                <h2 style="color: var(--samsung-blue); text-align: center;">Rasmiy YouTube Videolar</h2>
+                
+                <h3 style="margin: 30px 0 15px;">Galaxy S26 Ultra Taqdimoti</h3>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/2gYqEi8-am4" title="Galaxy S26 Ultra" allowfullscreen></iframe>
+                </div>
+
+                <h3 style="margin: 30px 0 15px;">Privacy Display</h3>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/VmY9nPrxEY8" title="Privacy Display" allowfullscreen></iframe>
+                </div>
+
+                <h3 style="margin: 30px 0 15px;">Galaxy AI</h3>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/guKQSNsnBfo" title="Galaxy AI" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:2000; justify-content:center; align-items:center;">
+        <img id="lightbox-img" style="max-width:90%; max-height:90%; border-radius:10px;">
+        <span onclick="closeLightbox()" style="position:absolute; top:20px; right:40px; color:white; font-size:40px; cursor:pointer;">&times;</span>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Samsung Media</h3>
+                    <p>Rasmlar va videolar.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Sahifalar</h3>
+                    <ul>
+                        <li><a href="index.html">Bosh sahifa</a></li>
+                        <li><a href="mahsulotlar.html">Mahsulotlar</a></li>
+                        <li><a href="telefonlar.html">Smartfonlar</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Samsung Media. Videolar rasmiy YouTube'dan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        function openLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) closeLightbox();
+        });
+    </script>
+</body>
+</html>
